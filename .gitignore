@@ -5,3 +5,4 @@ source_xdp/xdp_firewall_ip_filter
 source_xdp/xdp_firewall_user
 source_xdp/xdp_firewall_stats
 source_xdp/xdp_firewall_kernel
+source_af_xdp/af_xdp_user
