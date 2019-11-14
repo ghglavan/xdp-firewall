@@ -1,15 +1,15 @@
 # SPDX-License-Identifier: (GPL-2.0 OR BSD-2-Clause)
 
-LESSONS = $(wildcard source_*)
-LESSONS_CLEAN = $(addsuffix _clean,$(LESSONS))
+SOURCES = $(wildcard source_*)
+SOURCES_CLEAN = $(addsuffix _clean,$(SOURCES))
 
-.PHONY: clean $(LESSONS) $(LESSONS_CLEAN)
+.PHONY: clean $(SOURCES) $(SOURCES_CLEAN)
 
-all: $(LESSONS)
-clean: $(LESSONS_CLEAN)
+all: $(SOURCES)
+clean: $(SOURCES_CLEAN)
 
-$(LESSONS):
+$(SOURCES):
 	$(MAKE) -C $@
 
-$(LESSONS_CLEAN):
+$(SOURCES_CLEAN):
 	$(MAKE) -C $(subst _clean,,$@) clean
